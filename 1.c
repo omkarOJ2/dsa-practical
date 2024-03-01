@@ -61,13 +61,13 @@ void readCal(Activity* weekActivity)
     for(int i = 0; i < Days; i++)
     { 
         int x = 0;
-        printf("\n Enter for Day-%d\n", i);
+        printf("\n Enter for Day-%d\n", i+1);
         
         printf("\nEnter the date: ");
         scanf("%d", &weekActivity[i].date);
 
         printf("Enter the day name: ");
-        scanf("%9s", weekActivity[i].day);
+         scanf(" %9[^\n]", weekActivity[i].day);
         
         printf("\nEnter (1) if there is any activity else (0): ");
         scanf("%d", &x);
@@ -75,8 +75,8 @@ void readCal(Activity* weekActivity)
         
         if (x == 1)
         {
-            printf("\nEnter the Activity(in one word): ");
-            scanf(" %24s", weekActivity[i].activity);
+            printf("\nEnter the Activity: ");
+            scanf(" %24[^\n]", weekActivity[i].activity);
         }
         printf("\n====================================\n");
     }
@@ -85,7 +85,7 @@ void readCal(Activity* weekActivity)
 void displayCal(Activity* Ac)
 {
     printf("The Activity list of the week is: \n");
-    printf("sl no.\tDate\tDay\tActivity\n");
+    printf("sl no.\tDate\tDay\t\tActivity\n");
 
     for(int i = 0; i < Days; i++)
     {
