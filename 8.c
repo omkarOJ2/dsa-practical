@@ -128,7 +128,7 @@ void display(Node first)
     printf("\nUSN\t\tName\tDepartment\tdesignation\tSallary\tPhone num");
     while(cur!=NULL)
         {
-            printf("\n%s\t\t%s\t%s\t%s\t%d\t%s",cur->ssn, cur->name, cur->dep,cur->desig, cur->sal, cur->phno);
+            printf("\n%10s\t\t%10s\t%10s\t%10s\t%10d\t%10s",cur->ssn, cur->name, cur->dep,cur->desig, cur->sal, cur->phno);
             cur=cur->next;
             count++;
         }
