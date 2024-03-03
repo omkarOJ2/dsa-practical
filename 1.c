@@ -37,21 +37,10 @@ int main()
 Activity* createCal()
 {   
     Activity *cal = (Activity *)calloc(Days, sizeof(Activity));
-    if (cal == NULL)
-    {
-        // Handle memory allocation failure
-        exit(EXIT_FAILURE);
-    }
-
     for (int i = 0; i < Days; i++)
     {
         cal[i].day = (char *)calloc(10, sizeof(char));
         cal[i].activity = (char *)calloc(25, sizeof(char));
-        if (cal[i].day == NULL || cal[i].activity == NULL)
-        {
-            // Handle memory allocation failure
-            exit(EXIT_FAILURE);
-        }
     }
     return cal;
 }
