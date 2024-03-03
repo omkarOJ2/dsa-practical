@@ -78,7 +78,7 @@ void displayCal(Activity* Ac)
 
     for(int i = 0; i < Days; i++)
     {
-        printf("%d\t%d\t%s\t\t%s\n", i, Ac[i].date, Ac[i].day, Ac[i].activity);
+        printf("%d\t%d\t%s\t\t%s\n", i+1, Ac[i].date, Ac[i].day, Ac[i].activity);
     }
 }
 
